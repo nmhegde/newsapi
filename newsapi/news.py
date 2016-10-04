@@ -23,7 +23,7 @@ from newsapi.base import NewsObject
 from newsapi.sources import Sources
 
 class News(NewsObject):
-    def __init__(self, apikey, url="https://newsapi.org/v1/"):
+    def __init__(self, apikey, url="https://newsapi.org/v1"):
         self.url = url
         self.apikey = apikey
         self.sources = Sources.load(self.url, self.apikey)

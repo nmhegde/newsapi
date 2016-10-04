@@ -58,6 +58,8 @@ def get(url, headers=None):
     Returns:
       A JSON object.
     """
+
+    print url
     request = Request(url, headers=headers)
     result = urlopen(request).read()
 
