@@ -26,7 +26,11 @@ class News(NewsObject):
     def __init__(self, apikey, url="https://newsapi.org/v1"):
         self.url = url
         self.apikey = apikey
+    
+    def load_sources(self):
         self.sources = Sources.load(self.url, self.apikey)
+    
+    def load_articles(self):
         self.articles = Articles.load(self.url, self.apikey, self.sources)
 
     def get_sources(self):
@@ -34,3 +38,11 @@ class News(NewsObject):
 
     def get_articles(self):
         return self.articles
+
+    def set_sources(self, sources):
+        self.sources = sources
+        
+    def set_articles(self, articles):
+        self.articles = articles
+
+    
