@@ -28,6 +28,7 @@ class Article(NewsObject):
         self.description = description
         self.url = url
         self.urlToImage = urlToImage
+        self.publishedAt = publishedAt
 
     @staticmethod
     def de_json(data):
