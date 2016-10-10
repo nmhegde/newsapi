@@ -1,29 +1,20 @@
-# README #
+### NewsApi - A wrapper around newsapi.org api
 
-This README would normally document whatever steps are necessary to get your application up and running.
+#### How to install ?
 
-### What is this repository for? ###
+```sh
+git clone git@bitbucket.org:iamalchemy/newsapi.git && cd newsapi
+sudo python setup.py install
+```
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+#### How to use ?
 
-### How do I get set up? ###
+```sh
+from newsapi import News
+news = News("<Your API Key")
+news.load_sources()
+news.load_articles()
+```
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
-
-### Contribution guidelines ###
-
-* Writing tests
-* Code review
-* Other guidelines
-
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact
+#### Where do I refer API documentation ?
+[newsapi.org's documentation](https://newsapi.org/#documentation)
