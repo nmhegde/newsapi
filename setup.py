@@ -16,7 +16,7 @@ def requirements():
 
     return requirements_list
 
-with codecs.open('README.rst', 'r', 'utf-8') as fd:
+with codecs.open('README.md', 'r', 'utf-8') as fd:
     setup(name='newsapi',
           version=newsapi.__version__,
           author='Naveen Hegde, Nikhil Hegde',
