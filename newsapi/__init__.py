@@ -19,7 +19,15 @@
 # along with this program.  If not, see [http://www.gnu.org/licenses/].
 """A library that provides a Python interface to the newsapi.org API"""
 
-from newsapi.nullhandler import NullHandler
+from .news import News
+from .sources import Sources
+from .source import Source
+from .articles import Articles
+from .article import Article
+from .urlstologos import UrlsToLogos
+from .error import NewsError
+from .error import Unauthorized
+from .nullhandler import NullHandler
 
 __author__ = 'naveen.sanmane@gmail.com,nikhilmhegde@gmail.com'
 __version__ = '1.0.0'
@@ -32,4 +40,5 @@ __all__ = [
     'UrlsToLogos',
     'NewsError',
     'Unauthorized',
-    'NullHandler',]
+    'NullHandler',
+]
