@@ -59,7 +59,7 @@ def get(url, headers=None):
       A JSON object.
     """
 
-    print url
+    print(url)
     request = Request(url, headers=headers)
     result = urlopen(request).read()
 

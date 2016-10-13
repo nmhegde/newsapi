@@ -28,6 +28,7 @@ from .urlstologos import UrlsToLogos
 from .error import NewsError
 from .error import Unauthorized
 from .nullhandler import NullHandler
+from .base import NewsObject 
 
 __author__ = 'naveen.sanmane@gmail.com,nikhilmhegde@gmail.com'
 __version__ = '1.0.0'

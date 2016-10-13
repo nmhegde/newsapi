@@ -19,7 +19,7 @@
 # along with this program.  If not, see [http://www.gnu.org/licenses/].
 """This module contains object that represents news.Sources."""
 
-from base import NewsObject
+from newsapi.base import NewsObject
 from newsapi.article import Article
 from newsapi.utils import headers
 from newsapi.utils import request
