@@ -21,17 +21,26 @@
 from newsapi.articles import Articles
 from newsapi.base import NewsObject
 from newsapi.sources import Sources
+from newsapi.sourcearticle import SourceArticle
 
 class News(NewsObject):
     def __init__(self, apikey, url="https://newsapi.org/v1"):
         self.url = url
         self.apikey = apikey
-    
+        self.sources = None
+        self.articles = None
+        self.allarticles = []
+
     def load_sources(self):
         self.sources = Sources.load(self.url, self.apikey)
-    
+
     def load_articles(self):
         self.articles = Articles.load(self.url, self.apikey, self.sources)
+
+        # flatten the articles
+        for newsarticle in self.articles:
+            for article in newsarticle.articles:
+                self.allarticles.append(SourceArticle(newsarticle.source, newsarticle.sortBy, article))
 
     def get_sources(self):
         return self.sources
@@ -41,8 +50,11 @@ class News(NewsObject):
 
     def set_sources(self, sources):
         self.sources = sources
-        
+
     def set_articles(self, articles):
         self.articles = articles
 
-    
+    def get_allarticles(self):
+        return self.allarticles
+
+

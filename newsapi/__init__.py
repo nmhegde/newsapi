@@ -24,11 +24,12 @@ from .sources import Sources
 from .source import Source
 from .articles import Articles
 from .article import Article
+from .sourcearticle import SourceArticle
 from .urlstologos import UrlsToLogos
 from .error import NewsError
 from .error import Unauthorized
 from .nullhandler import NullHandler
-from .base import NewsObject 
+from .base import NewsObject
 
 __author__ = 'naveen.sanmane@gmail.com,nikhilmhegde@gmail.com'
 __version__ = '1.0.0'
@@ -38,6 +39,7 @@ __all__ = [
     'Source',
     'Articles',
     'Article',
+    'SourceArticle',
     'UrlsToLogos',
     'NewsError',
     'Unauthorized',
