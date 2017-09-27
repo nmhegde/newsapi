@@ -3,7 +3,7 @@
 #### How to install ?
 
 ```sh
-git clone git@bitbucket.org:iamalchemy/newsapi.git && cd newsapi
+git clone git@github.com:nmhegde/newsapi.git && cd newsapi
 sudo python setup.py install
 ```
 
