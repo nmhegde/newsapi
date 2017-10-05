@@ -14,6 +14,10 @@ from newsapi import News
 news = News("<Your API Key")
 news.load_sources()
 news.load_articles()
+newsList = news.get_articles(news)
+for news in newsList:
+  for article in news.article:
+    print article.title
 ```
 
 #### Where do I refer API documentation ?
